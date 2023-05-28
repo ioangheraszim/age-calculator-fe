@@ -2,4 +2,137 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 94%);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 23.438rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.625rem 0.625rem 10rem 0.625rem;
+  padding: 1rem;
+}
+.container .wrapper {
+  padding: 1rem;
+}
+.container .wrapper form {
+  display: flex;
+  padding-bottom: 4rem;
+}
+.container .wrapper form label {
+  text-transform: uppercase;
+  color: hsl(0, 1%, 44%);
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+}
+.container .wrapper form input {
+  width: 80%;
+  padding: 1.25rem 0 1.25rem 1rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  border: 1px solid hsl(0, 0%, 86%);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.313rem;
+  text-align: left;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+}
+.container .wrapper form input:focus {
+  outline: 1px solid hsl(259, 100%, 65%);
+}
+.container .wrapper form .error-validation {
+  display: none;
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 67%);
+  margin-top: 0.5rem;
+}
+.container .wrapper form .error-field {
+  display: none;
+  font-size: 0.5rem;
+  color: hsl(0, 100%, 67%);
+  margin-top: 0.5rem;
+}
+.container .wrapper .button-container .circle-btn {
+  width: 4.375rem;
+  height: 4.375rem;
+  position: absolute;
+  top: 45%;
+  left: 43%;
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+.container .wrapper .button-container .circle-btn img {
+  width: 100%;
+}
+.container .wrapper .button-container .circle-btn:active {
+  background-color: black;
+}
+.container .wrapper .text-content {
+  padding-top: 4rem;
+}
+.container .wrapper .text-content p {
+  color: hsl(259, 100%, 65%);
+  font-size: 2rem;
+}
+.container .wrapper .text-content p span {
+  color: hsl(0, 0%, 8%);
+}
+
+@media (min-width: 45.313rem) {
+  .container {
+    max-width: 40rem;
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+  }
+  .container .wrapper {
+    max-width: 31.25rem;
+  }
+  .container .wrapper form input {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .container .wrapper form .error-validation {
+    font-size: 0.8rem;
+  }
+  .container .wrapper form .error-field {
+    font-size: 0.8rem;
+  }
+  .container .wrapper .button-container {
+    position: relative;
+    max-width: 45rem;
+  }
+  .container .wrapper .button-container .separation {
+    width: 34.375rem;
+  }
+  .container .wrapper .button-container .circle-btn {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 20rem;
+    top: calc(100% - 2.5rem);
+    left: calc(100% + 1rem);
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .container .wrapper .button-container .circle-btn img {
+    width: 100%;
+  }
+  .container .wrapper .text-content p {
+    font-size: 3rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -19,3 +19,169 @@ $off-black: hsl(0, 0%, 8%);
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $off-white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 23.438rem;
+    background-color: $white;
+    border-radius: 0.625rem 0.625rem 10rem 0.625rem;
+    padding: 1rem;    
+
+    .wrapper {        
+        padding: 1rem;           
+
+        form {            
+            display: flex;
+            padding-bottom: 4rem;
+    
+            label {
+                text-transform: uppercase;
+                color: $smoke-grey;
+                display: block;
+                margin-bottom: 0.5rem;
+                letter-spacing: .2rem;
+                font-size: .7rem;                
+            }
+    
+            input {
+                width: 80%;
+                padding: 1.25rem 0 1.25rem 1rem;
+                height: 2rem;               
+                font-size: .8rem;
+                border: 1px solid $light-grey;                
+                font-weight: 700;
+                font-size: 1rem;
+                border-radius: 0.313rem;
+                text-align: left;   
+                cursor: pointer;
+                background-color: $white;
+            } 
+    
+            input:focus {
+                outline: 1px solid $purple;
+            }
+            
+            .error-validation {
+                display: none;
+                font-size: .5rem;
+                color: $light-red;
+                margin-top: .5rem;
+            }
+
+            .error-field {
+                display: none;
+                font-size: .5rem;
+                color: $light-red;
+                margin-top: .5rem;
+            }
+        }
+
+        .button-container {
+           
+            .circle-btn {
+                width: 4.375rem;
+                height: 4.375rem;
+                position: absolute;
+                top: 45%;
+                left: 43%;
+                background-color: $purple;
+                border: none;
+                border-radius: 50%;
+                padding: 1rem;
+                cursor: pointer;
+        
+                img {
+                    width: 100%;
+                }
+            }
+
+            .circle-btn:active {
+                background-color: black;
+            }
+        }
+
+        .text-content {            
+            padding-top: 4rem;
+
+            p {
+                color: $purple;
+                font-size: 2rem;
+
+                span {
+                    color: $off-black;
+                }
+            }
+        }       
+    }
+
+}
+
+@media (min-width: 45.313rem) {
+
+    .container {
+      max-width: 40rem;           
+      background-color: $white;      
+      width: 100%;
+
+        .wrapper{
+            max-width: 31.25rem;
+
+            form {
+
+                input {
+                    width: 90%;
+                    font-size: 1.5rem;
+                }
+                
+                .error-validation {
+                    font-size: .8rem;
+                }
+    
+                .error-field {
+                    font-size: .8rem;
+                }
+            }
+
+            .button-container {
+                position: relative;
+                max-width: 45rem;
+              
+                .separation {
+                  width: 34.375rem;
+                }
+              
+                .circle-btn {
+                  width: 5rem;
+                  height: 5rem;
+                  position: absolute;
+                  bottom: 20rem;
+                  top: calc(100% - 2.5rem);
+                  left: calc(100% + 1rem); 
+                  background-color: $purple;
+                  border-radius: 50%;
+                  padding: 1rem;
+                  cursor: pointer;
+              
+                  img {
+                    width: 100%;
+                  }
+                }
+            }
+
+            .text-content {
+                p {
+                    font-size: 3rem;
+                }
+            }
+        }
+        
+    }
+}
