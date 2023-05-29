@@ -77,7 +77,7 @@ body {
             }
 
             .error-field {
-                display: none;
+                display: none;                
                 font-size: .5rem;
                 color: $light-red;
                 margin-top: .5rem;
@@ -111,12 +111,18 @@ body {
         .text-content {            
             padding-top: 4rem;
 
-            p {
-                color: $purple;
-                font-size: 2rem;
+            .content-child {
+                display: flex;
+                align-items: center;
+                .number-text {                
+                    color: $purple;
+                    font-size: 2rem;
+                }
 
-                span {
+                .sub-text {
                     color: $off-black;
+                    font-size: 2rem;
+                    margin-left: .5rem;
                 }
             }
         }       
@@ -177,9 +183,16 @@ body {
             }
 
             .text-content {
-                p {
-                    font-size: 3rem;
+                .content-child {
+                    .number-text {
+                        font-size: 3rem;
+                    }
+
+                    .sub-text {
+                        font-size: 3rem;
+                    }
                 }
+               
             }
         }
         

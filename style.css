@@ -83,12 +83,18 @@ body {
 .container .wrapper .text-content {
   padding-top: 4rem;
 }
-.container .wrapper .text-content p {
+.container .wrapper .text-content .content-child {
+  display: flex;
+  align-items: center;
+}
+.container .wrapper .text-content .content-child .number-text {
   color: hsl(259, 100%, 65%);
   font-size: 2rem;
 }
-.container .wrapper .text-content p span {
+.container .wrapper .text-content .content-child .sub-text {
   color: hsl(0, 0%, 8%);
+  font-size: 2rem;
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 45.313rem) {
@@ -132,7 +138,10 @@ body {
   .container .wrapper .button-container .circle-btn img {
     width: 100%;
   }
-  .container .wrapper .text-content p {
+  .container .wrapper .text-content .content-child .number-text {
+    font-size: 3rem;
+  }
+  .container .wrapper .text-content .content-child .sub-text {
     font-size: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
