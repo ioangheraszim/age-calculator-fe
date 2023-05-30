@@ -57,6 +57,25 @@ body {
   margin-top: 0.2rem;
   margin: 0;
   font-style: italic;
+  animation: wiggle 0.5s ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .container .wrapper form .error-field {
   display: none;
@@ -65,6 +84,8 @@ body {
   margin-top: 0.2rem;
   margin: 0;
   font-style: italic;
+  animation: wiggle 0.5s ease-in-out;
+  animation-iteration-count: 1;
 }
 .container .wrapper .button-container .circle-btn {
   width: 4.375rem;
@@ -92,8 +113,20 @@ body {
   align-items: center;
 }
 .container .wrapper .text-content .content-child .number-text {
+  animation: numberAnimation 1s ease-in-out;
   color: hsl(259, 100%, 65%);
   font-size: 2rem;
+}
+@keyframes numberAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .container .wrapper .text-content .content-child .sub-text {
   color: hsl(0, 0%, 8%);

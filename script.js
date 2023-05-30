@@ -30,53 +30,60 @@ const yearLabel = document.querySelector('label[for="input-year"]');
 
 // Validate the day
 function validateDay() {
-    const day = dayInput.value; 
+    const day = dayInput.value;
     if (day === "") {
-        dayErrorF.style.display = "block"; 
-        dayInput.style.outline = "1px solid hsl(0, 100%, 67%)";
-        dayLabel.style.color = "hsl(0, 100%, 67%)";
-    } else if(day < 1 || day > 31){
-        dayVal.style.display = "block";
-    } 
-    else {
-        dayInput.style.outline = "1px solid hsl(0, 1%, 44%)";
-        dayLabel.style.color = "hsl(0, 1%, 44%)";
-        dayVal.style.display = "none";
+      dayErrorF.style.display = "block";
+      dayInput.style.outline = "1px solid hsl(0, 100%, 67%)";
+      dayLabel.style.color = "hsl(0, 100%, 67%)";
+      dayVal.style.display = "none";
+      dayErrorF.style.animation = "wiggle .5s ease-in-out";
+    } else if (day < 1 || day > 31) {
+      dayVal.style.display = "block";
+    } else {
+      dayInput.style.outline = "1px solid hsl(0, 1%, 44%)";
+      dayLabel.style.color = "hsl(0, 1%, 44%)";
+      dayVal.style.display = "none";
+      dayErrorF.style.animation = "";
     }
-}
+  }
   
   // Validate the month
-function validateMonth() {
+  function validateMonth() {
     const month = monthInput.value;
-    if(month === ""){
-        monthErrorF.style.display = "block";
-        monthInput.style.outline = "1px solid hsl(0, 100%, 67%)";
-        monthLabel.style.color = "hsl(0, 100%, 67%)";         
-    }
-    else if (month < 1 || month > 12) {
-        monthVal.style.display = "block";
+    if (month === "") {
+      monthErrorF.style.display = "block";
+      monthInput.style.outline = "1px solid hsl(0, 100%, 67%)";
+      monthLabel.style.color = "hsl(0, 100%, 67%)";
+      monthVal.style.display = "none";
+      monthErrorF.style.animation = "wiggle .5s ease-in-out";
+    } else if (month < 1 || month > 12) {
+      monthVal.style.display = "block";
     } else {
-        monthVal.style.display = "none";
-        monthInput.style.outline = "1px solid hsl(0, 1%, 44%)";
-        monthLabel.style.color = "hsl(0, 1%, 44%)";        
+      monthVal.style.display = "none";
+      monthInput.style.outline = "1px solid hsl(0, 1%, 44%)";
+      monthLabel.style.color = "hsl(0, 1%, 44%)";
+      monthErrorF.style.animation = "";
     }
-}
+  }
   
   // Validate the year
-function validateYear() {
+  function validateYear() {
     const year = yearInput.value;
     if (year === "") {
-        yearErrorF.style.display = "block";
-        yearInput.style.outline = "1px solid hsl(0, 100%, 67%)";
-        yearLabel.style.color = "hsl(0, 100%, 67%)";
+      yearErrorF.style.display = "block";
+      yearInput.style.outline = "1px solid hsl(0, 100%, 67%)";
+      yearLabel.style.color = "hsl(0, 100%, 67%)";
+      yearVal.style.display = "none";
+      yearErrorF.style.animation = "wiggle .5s ease-in-out";
     } else if (year < 1970 || year > new Date().getFullYear()) {
-        yearVal.style.display = "block";           
+      yearVal.style.display = "block";
     } else {
-        yearVal.style.display = "none";
-        yearInput.style.outline = "1px solid hsl(0, 1%, 44%)";
-        yearLabel.style.color = "hsl(0, 1%, 44%)";
+      yearVal.style.display = "none";
+      yearInput.style.outline = "1px solid hsl(0, 1%, 44%)";
+      yearLabel.style.color = "hsl(0, 1%, 44%)";
+      yearErrorF.style.animation = "";
     }
-}
+  }
 
 // Calculate age
 function calculateAge() {
@@ -112,7 +119,18 @@ function clearErrors() {
     yearErrorF.style.display = "none";
 }
 // Add event listeners
-myBtn.addEventListener("click", calculateAge);
+myBtn.addEventListener("click", () => {
+    calculateAge();
+    dayContent.classList.remove("number-text");
+    monthContent.classList.remove("number-text");
+    yearContent.classList.remove("number-text");
+    setTimeout(function () {
+    dayContent.classList.add("number-text");
+    monthContent.classList.add("number-text");
+    yearContent.classList.add("number-text");
+  }, 10);
+});
+
 dayInput.addEventListener("input", clearErrors);
 monthInput.addEventListener("input", clearErrors);
 yearInput.addEventListener("input", clearErrors);
