@@ -24,16 +24,23 @@ const dayVal = document.getElementById("day-valid");
 const monthVal = document.getElementById("month-valid");
 const yearVal = document.getElementById("year-valid");
 
+const dayLabel = document.querySelector("label[for=input-day]");
+const monthLabel = document.querySelector('label[for="input-month"]');
+const yearLabel = document.querySelector('label[for="input-year"]');
 
 // Validate the day
 function validateDay() {
     const day = dayInput.value; 
     if (day === "") {
-        dayErrorF.style.display = "block";        
+        dayErrorF.style.display = "block"; 
+        dayInput.style.outline = "1px solid hsl(0, 100%, 67%)";
+        dayLabel.style.color = "hsl(0, 100%, 67%)";
     } else if(day < 1 || day > 31){
-        dayVal.style.display = "block"
+        dayVal.style.display = "block";
     } 
     else {
+        dayInput.style.outline = "1px solid hsl(0, 1%, 44%)";
+        dayLabel.style.color = "hsl(0, 1%, 44%)";
         dayVal.style.display = "none";
     }
 }
@@ -43,11 +50,15 @@ function validateMonth() {
     const month = monthInput.value;
     if(month === ""){
         monthErrorF.style.display = "block";
+        monthInput.style.outline = "1px solid hsl(0, 100%, 67%)";
+        monthLabel.style.color = "hsl(0, 100%, 67%)";         
     }
     else if (month < 1 || month > 12) {
         monthVal.style.display = "block";
     } else {
         monthVal.style.display = "none";
+        monthInput.style.outline = "1px solid hsl(0, 1%, 44%)";
+        monthLabel.style.color = "hsl(0, 1%, 44%)";        
     }
 }
   
@@ -56,10 +67,14 @@ function validateYear() {
     const year = yearInput.value;
     if (year === "") {
         yearErrorF.style.display = "block";
+        yearInput.style.outline = "1px solid hsl(0, 100%, 67%)";
+        yearLabel.style.color = "hsl(0, 100%, 67%)";
     } else if (year < 1970 || year > new Date().getFullYear()) {
-        yearVal.style.display = "block";
+        yearVal.style.display = "block";           
     } else {
         yearVal.style.display = "none";
+        yearInput.style.outline = "1px solid hsl(0, 1%, 44%)";
+        yearLabel.style.color = "hsl(0, 1%, 44%)";
     }
 }
 

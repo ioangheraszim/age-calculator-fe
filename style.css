@@ -54,19 +54,23 @@ body {
   display: none;
   font-size: 0.5rem;
   color: hsl(0, 100%, 67%);
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
+  margin: 0;
+  font-style: italic;
 }
 .container .wrapper form .error-field {
   display: none;
   font-size: 0.5rem;
   color: hsl(0, 100%, 67%);
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
+  margin: 0;
+  font-style: italic;
 }
 .container .wrapper .button-container .circle-btn {
   width: 4.375rem;
   height: 4.375rem;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 43%;
   background-color: hsl(259, 100%, 65%);
   border: none;

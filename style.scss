@@ -73,14 +73,18 @@ body {
                 display: none;
                 font-size: .5rem;
                 color: $light-red;
-                margin-top: .5rem;
+                margin-top: .2rem;
+                margin: 0;
+                font-style: italic;
             }
 
             .error-field {
                 display: none;                
                 font-size: .5rem;
                 color: $light-red;
-                margin-top: .5rem;
+                margin-top: .2rem;
+                margin: 0;
+                font-style: italic;
             }
         }
 
@@ -90,12 +94,13 @@ body {
                 width: 4.375rem;
                 height: 4.375rem;
                 position: absolute;
-                top: 45%;
+                top: 40%;
                 left: 43%;
                 background-color: $purple;
                 border: none;
                 border-radius: 50%;
                 padding: 1rem;
+
                 cursor: pointer;
         
                 img {
